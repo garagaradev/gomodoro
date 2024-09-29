@@ -1,6 +1,7 @@
 package main
-import "fmt"
+import "github.com/garagaradev/gomodoro/gomodoro"
 
 func main(){
-  fmt.Println("Test in Prod!")
+  g := gomodoro.NewGomodoro()
+  g.StartGomodoro()
 }
