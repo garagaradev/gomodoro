@@ -13,9 +13,9 @@ type Gomodoro struct {
   Cycles int
 }
 
-func NewGomodoro() *Gomodoro {
+func NewGomodoro(workdDurationMinutes int) *Gomodoro {
   return &Gomodoro {
-    WorkDuration: 25 * time.Minute,
+    WorkDuration: time.Duration(workdDurationMinutes) * time.Minute,
     ShortBreak: 5 * time.Minute,
     LongBreak: 15 * time.Minute,
     CyclesBeforeLongBreak: 4,
